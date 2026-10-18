@@ -5,7 +5,7 @@
 
 int main(void) {
     tusb_init();
-    keys_init();
+    keys_init();                             // calibrates: keep keys released
 
     while (true) {
         tud_task();                          // USB housekeeping, must run often
@@ -15,6 +15,6 @@ int main(void) {
         while (tud_midi_available()) tud_midi_packet_read(packet);
         while (tud_cdc_available())  tud_cdc_read_char();
 
-        keys_update(to_ms_since_boot(get_absolute_time()));
+        keys_update(time_us_32());           // microseconds, for velocity timing
     }
 }

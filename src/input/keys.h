@@ -2,8 +2,9 @@
 
 #include <stdint.h>
 
-// Set up all keys defined in config.h.
+// Set up the mux and calibrate every key's resting value.
+// Keep all keys released while this runs.
 void keys_init(void);
 
-// Scan every key and send MIDI on press/release.
-void keys_update(uint32_t now_ms);
+// Read every key and send MIDI on press/release. Time is in microseconds.
+void keys_update(uint32_t now_us);

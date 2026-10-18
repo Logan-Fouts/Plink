@@ -1,30 +1,58 @@
 #include "input/keys.h"
 
 #include "input/button.h"
+#include "input/mux.h"
 #include "midi/midi_out.h"
 #include "debug/debug.h"
 #include "config.h"
 
-static button_t buttons[KEY_COUNT];
-static const uint8_t key_pins[KEY_COUNT]  = KEY_PINS;
-static const uint8_t key_notes[KEY_COUNT] = KEY_NOTES;
+// A key = which mux channel it is on + which note it plays + its Hall state.
+typedef struct {
+    uint8_t  mux_channel;
+    uint8_t  note;
+    button_t button;
+} keyswitch_t;
+
+static keyswitch_t keys[KEY_COUNT] = KEY_MAP;
 
 void keys_init(void) {
+    mux_init();
+
+    // Measure each key's resting value (average of several readings).
     for (int i = 0; i < KEY_COUNT; i++) {
-        button_init(&buttons[i], key_pins[i]);
+        uint32_t sum = 0;
+        for (int n = 0; n < HALL_CALIBRATION_READS; n++) {
+            sum += mux_read(keys[i].mux_channel);
+        }
+        button_init(&keys[i].button, (uint16_t)(sum / HALL_CALIBRATION_READS));
     }
 }
 
-void keys_update(uint32_t now_ms) {
-    for (int i = 0; i < KEY_COUNT; i++) {
-        button_event_t e = button_update(&buttons[i], now_ms);
+void keys_update(uint32_t now_us) {
+#if DEBUG_STREAM_KEY >= 0
+    static uint32_t last_stream_us = 0;
+#endif
 
-        if (e == BUTTON_EVENT_PRESSED) {
-            midi_send_note_on(key_notes[i], DEFAULT_VELOCITY);
-            debug_printf("key %d (GPIO %d, note %d) pressed\r\n", i, key_pins[i], key_notes[i]);
-        } else if (e == BUTTON_EVENT_RELEASED) {
-            midi_send_note_off(key_notes[i]);
-            debug_printf("key %d (GPIO %d, note %d) released\r\n", i, key_pins[i], key_notes[i]);
+    for (int i = 0; i < KEY_COUNT; i++) {
+        keyswitch_t *k = &keys[i];
+
+        uint16_t raw = mux_read(k->mux_channel);
+        button_event_t e = button_update(&k->button, raw, now_us);
+
+        if (e.type == BUTTON_EVENT_PRESSED) {
+            midi_send_note_on(k->note, e.velocity);
+            debug_printf("key %d note %d pressed, velocity %d (travel %u us)\r\n",
+                         i, k->note, e.velocity, (unsigned)e.travel_us);
+        } else if (e.type == BUTTON_EVENT_RELEASED) {
+            midi_send_note_off(k->note);
+            debug_printf("key %d note %d released\r\n", i, k->note);
         }
+
+#if DEBUG_STREAM_KEY >= 0
+        if (i == DEBUG_STREAM_KEY && (now_us - last_stream_us) >= 20000) {
+            last_stream_us = now_us;
+            debug_printf("raw %u pos %d\r\n", raw, (int)button_position(&k->button));
+        }
+#endif
     }
 }
