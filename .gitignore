@@ -1,0 +1,38 @@
+!.vscode/*
+
+# Build output
+build/
+*.uf2
+*.elf
+*.bin
+*.hex
+*.map
+*.dis
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# VS Code (the Pico extension writes machine-specific paths here)
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / temp files
+*.swp
+*~
+*.log
+
+# KiCad (hardware/)
+hardware/**/*-backups/
+hardware/**/*.kicad_prl
+hardware/**/fp-info-cache
+hardware/**/*.bak
+hardware/**/*-bak
+hardware/**/_autosave-*
+hardware/**/*.lck
