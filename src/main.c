@@ -2,6 +2,7 @@
 #include "tusb.h"
 
 #include "input/keys.h"
+#include "leds/leds.h"
 
 int main(void) {
     tusb_init();
@@ -16,5 +17,6 @@ int main(void) {
         while (tud_cdc_available())  tud_cdc_read_char();
 
         keys_update(time_us_32());           // microseconds, for velocity timing
+        leds_update();                       // send LED changes (only if any)
     }
 }

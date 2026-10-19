@@ -5,9 +5,9 @@
 
 // Where a key is in its press.
 typedef enum {
-    BUTTON_STATE_IDLE,         // at rest
-    BUTTON_STATE_TRAVELLING,   // passed the LOW threshold, timing the press
-    BUTTON_STATE_DOWN          // note sent, waiting for release
+    BUTTON_STATE_IDLE,
+    BUTTON_STATE_TRAVELLING,
+    BUTTON_STATE_DOWN
 } button_state_t;
 
 typedef enum {

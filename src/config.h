@@ -44,3 +44,11 @@
 // Stream raw ADC + position of this key over serial every 20 ms
 // (useful for tuning). Set to -1 to turn it off.
 #define DEBUG_STREAM_KEY    0
+
+// ---- LEDs (NeoPixel / WS2812, one per key) ----
+#define LED_PIN             16
+#define LED_COUNT           KEY_COUNT
+#define LED_BRIGHTNESS      64            // 0-255, global (full white draws ~60 mA per LED)
+#define LED_PRESSED_R       0
+#define LED_PRESSED_G       120
+#define LED_PRESSED_B       255

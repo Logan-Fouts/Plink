@@ -46,8 +46,6 @@ button_event_t button_update(button_t *b, uint16_t raw, uint32_t now_us) {
     if (b->state == BUTTON_STATE_IDLE && pos >= HALL_THRESHOLD_LOW) {
         b->state = BUTTON_STATE_TRAVELLING;
         b->start_us = now_us;
-        // No "else": fall straight into the check below, so a very fast
-        // press that crosses both thresholds in one scan still works.
     }
 
     if (b->state == BUTTON_STATE_TRAVELLING) {
@@ -59,7 +57,7 @@ button_event_t button_update(button_t *b, uint16_t raw, uint32_t now_us) {
             ev.travel_us = dt;
             b->state = BUTTON_STATE_DOWN;
         } else if (pos < HALL_THRESHOLD_RELEASE) {
-            // Key went back up before reaching the top: cancel, no note.
+            // Key went back up before reaching threshold: cancel, no note.
             b->state = BUTTON_STATE_IDLE;
         }
     } else if (b->state == BUTTON_STATE_DOWN) {
