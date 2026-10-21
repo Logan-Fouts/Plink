@@ -6,4 +6,4 @@
 void mux_init(void);
 
 // Select a mux channel (0-15) and return the averaged 12-bit ADC reading.
-uint16_t mux_read(uint8_t channel);
+uint16_t mux_read(int channel);

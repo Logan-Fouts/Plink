@@ -33,6 +33,8 @@ add_executable(plink
     src/input/keys.c
     src/input/mux.c
     src/leds/leds.c
+    src/hardware/rp2040/mux_hw_rp2040.c
+    src/hardware/rp2040/utils_hw_rp2040.c
 )
 
 pico_generate_pio_header(plink ${CMAKE_CURRENT_LIST_DIR}/src/leds/ws2812.pio)

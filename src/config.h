@@ -7,6 +7,7 @@
 
 // ---- Analog multiplexer (CD74HC4067) ----
 #define MUX_SELECT_PINS     { 10, 11, 12, 13 }   // S0..S3
+#define MUX_SELECT_PIN_COUNT 4
 #define MUX_ADC_GPIO        26                   // SIG -> GP26 (ADC0)
 #define MUX_SETTLE_US       10
 #define MUX_SAMPLES         4                    // ADC reads averaged per key
