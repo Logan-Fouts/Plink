@@ -1,21 +1,22 @@
-# == DO NOT EDIT THE FOLLOWING LINES for the Raspberry Pi Pico VS Code Extension to work ==
-if(WIN32)
-    set(USERHOME $ENV{USERPROFILE})
-else()
-    set(USERHOME $ENV{HOME})
-endif()
-set(sdkVersion 2.3.1)
-set(toolchainVersion 15_2_Rel1)
-set(picotoolVersion 2.3.1)
-set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
-if (EXISTS ${picoVscode})
-    include(${picoVscode})
-endif()
-# ====================================================================================
+# So far im not really a fan of the VScode pico extension, So I'm commenting this out for now
+# # == DO NOT EDIT THE FOLLOWING LINES for the Raspberry Pi Pico VS Code Extension to work ==
+# if(WIN32)
+#     set(USERHOME $ENV{USERPROFILE})
+# else()
+#     set(USERHOME $ENV{HOME})
+# endif()
+# set(sdkVersion 2.3.1)
+# set(toolchainVersion 15_2_Rel1)
+# set(picotoolVersion 2.3.1)
+# set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
+# if (EXISTS ${picoVscode})
+#     include(${picoVscode})
+# endif()
+# # ====================================================================================
+
 cmake_minimum_required(VERSION 3.13)
 
-# set(PICO_BOARD pico2)   # uncomment for Pico 2 (must come before the include below)
-
+# Environment must point at this sdk path
 include(pico_sdk_import.cmake)
 
 project(plink C CXX ASM)
@@ -46,6 +47,7 @@ target_link_libraries(plink
     tinyusb_device
     hardware_adc
     hardware_pio
+    pico_multicore
 )
 
 pico_add_extra_outputs(plink)

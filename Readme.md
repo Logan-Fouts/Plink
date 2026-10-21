@@ -16,6 +16,7 @@ Base: simple, cheap MIDI keyboard (Pico, USB MIDI, keyswitches)
 - Pi Pico
 - Analog Multiplexer (CD74HC4067, https://www.digikey.com/en/products/detail/texas-instruments/CD74HC4067SM96/390310)
 - Halleffect Key Switches (https://www.maxgaming.se/sv/switchar/moyu-studio-yurui-he-linear-switch)
+- Halleffect sensors (https://www.electrokit.com/en/ss49eua-to-92-hall-effektsensor-2mv/g)
 - Neopixels (https://www.digikey.com/en/products/detail/adafruit-industries-llc/1655/5154679)
 
 
