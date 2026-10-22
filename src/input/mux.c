@@ -28,7 +28,7 @@ uint16_t mux_read(int channel) {
   for (int i = 0; i < MUX_SELECT_PIN_COUNT; i++) {
     mux_hw_set_select_pin(i, (channel >> i) & 1);
   }
-  
+
   // Let readings settle on new channel
   utils_hw_sleep(MUX_SETTLE_US);
 

@@ -1,5 +1,4 @@
 #include "input/keys.h"
-
 #include "input/button.h"
 #include "input/mux.h"
 #include "midi/midi_out.h"
