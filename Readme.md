@@ -21,6 +21,7 @@ Base: simple, cheap MIDI keyboard (Pico, USB MIDI, keyswitches)
 
 ## Testing
 - `cd ~/Code/Plink/`
+- `cmake -S test -B build/test`
 - `cmake --build build/test`
 - `ctest --test-dir build/test --output-on-failure`
 

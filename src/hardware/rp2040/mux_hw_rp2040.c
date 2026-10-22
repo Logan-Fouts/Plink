@@ -12,14 +12,14 @@ void mux_hw_init(void) {
   adc_gpio_init(MUX_ADC_GPIO);
   adc_select_input(MUX_ADC_GPIO - ADC_FIRST_GPIO);  // Sets the ADC input source pin.
   for (int i = 0; i < MUX_SELECT_PIN_COUNT; i++) {
-      gpio_init(select_pins[i]);
-      gpio_set_dir(select_pins[i], GPIO_OUT);
-      gpio_put(select_pins[i], 0);
+    gpio_init(select_pins[i]);
+    gpio_set_dir(select_pins[i], GPIO_OUT);
+    gpio_put(select_pins[i], 0);
   }
 }
 
 void mux_hw_set_select_pin(int pin_ix, int level) {
-    gpio_put(select_pins[pin_ix], level);
+  gpio_put(select_pins[pin_ix], level);
 }
 
 uint16_t mux_hw_read_adc(void) {
