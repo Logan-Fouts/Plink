@@ -37,7 +37,7 @@ uint16_t mux_read(int channel) {
   // Take readings and average them
   uint32_t sum = 0;
   for (int n = 0; n < MUX_SAMPLES; n++) {
-      sum += mux_hw_read_adc();
+    sum += mux_hw_read_adc();
   }
 
   return (uint16_t)(sum / MUX_SAMPLES);

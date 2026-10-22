@@ -13,7 +13,7 @@ static bool     dirty = false;
 static uint32_t last_send_us = 0;
 
 static inline uint32_t pack_grb(uint8_t r, uint8_t g, uint8_t b) {
-    return ((uint32_t)g << 16) | ((uint32_t)r << 8) | (uint32_t)b;
+  return ((uint32_t)g << 16) | ((uint32_t)r << 8) | (uint32_t)b;
 }
 
 void leds_init(void) {
@@ -27,15 +27,15 @@ void leds_init(void) {
 
 
 void leds_set_color(uint8_t index, uint8_t r, uint8_t g, uint8_t b) {
-    if (index >= LED_COUNT || index < 0) return;
+  if (index >= LED_COUNT || index < 0) return;
 
-    uint32_t value = pack_grb((uint8_t)((r * LED_BRIGHTNESS) / 255),
-                              (uint8_t)((g * LED_BRIGHTNESS) / 255),
-                              (uint8_t)((b * LED_BRIGHTNESS) / 255));
-    if (pixels[index] != value) {
-        pixels[index] = value;
-        dirty = true;
-    }
+  uint32_t value = pack_grb((uint8_t)((r * LED_BRIGHTNESS) / 255),
+                          (uint8_t)((g * LED_BRIGHTNESS) / 255),
+                          (uint8_t)((b * LED_BRIGHTNESS) / 255));
+  if (pixels[index] != value) {
+    pixels[index] = value;
+    dirty = true;
+  }
 }
 
 void leds_off(uint8_t index) {
@@ -43,24 +43,24 @@ void leds_off(uint8_t index) {
 }
 
 void leds_clear(void) {
-    for (uint8_t i = 0; i < LED_COUNT; i++) {
-        leds_off(i);
-    }
-    dirty = true;
+  for (uint8_t i = 0; i < LED_COUNT; i++) {
+    leds_off(i);
+  }
+  dirty = true;
 }
 
 void leds_update(void) {
-    if (!dirty) return;
+  if (!dirty) return;
 
-    uint32_t now = time_us();
-    if ((now - last_send_us) < FRAME_TIME_US) return;   // previous frame still going
+  uint32_t now = time_us();
+  if ((now - last_send_us) < FRAME_TIME_US) return;   // previous frame still going
 
-    last_send_us = now;
-    dirty = false;
+  last_send_us = now;
+  dirty = false;
 
-    // The state machine expects the 24 colour bits at the top of the 32-bit word.
-    // This blocks briefly while the FIFO drains (~30 us per LED once it is full).
-    for (uint8_t i = 0; i < LED_COUNT; i++) {
-      leds_hw_pio_put_blocking(pixels[i]);  
-    }
+  // The state machine expects the 24 colour bits at the top of the 32-bit word.
+  // This blocks briefly while the FIFO drains (~30 us per LED once it is full).
+  for (uint8_t i = 0; i < LED_COUNT; i++) {
+    leds_hw_pio_put_blocking(pixels[i]);  
+  }
 }
