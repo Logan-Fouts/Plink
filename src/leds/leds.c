@@ -1,8 +1,7 @@
+#include <stdbool.h>
 #include "leds/leds.h"
 #include "hardware/leds_hw.h"
 #include "hardware/utils_hw.h"
-
-#include <stdbool.h>
 #include "config.h"
 
 // Each LED takes ~30 us to send (24 bits at 800 kHz); after a frame the line

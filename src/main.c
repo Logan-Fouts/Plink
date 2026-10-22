@@ -13,7 +13,7 @@ void core1_entry() {
 
     multicore_fifo_push_blocking(FLAG_VALUE);
     multicore_fifo_pop_blocking();
-    debug_printf("Core 1 Started\r\n"); // NOT TREAD SAFE use a safe queue with locks or for small info the FIFO
+    debug_printf("Core 1 Started\r\n"); // TODO: NOT TREAD SAFE use a safe queue with locks or for small info the FIFO
 
 
     while (true) {

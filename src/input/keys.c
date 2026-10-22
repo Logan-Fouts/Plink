@@ -1,8 +1,8 @@
 #include "input/keys.h"
 #include "input/button.h"
+#include "debug/debug.h"
 #include "input/mux.h"
 #include "midi/midi_out.h"
-#include "debug/debug.h"
 #include "leds/leds.h"
 #include "config.h"
 

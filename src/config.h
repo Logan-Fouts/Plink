@@ -36,6 +36,7 @@
 // ---- Debug ----
 // Stream raw ADC + position of this key over serial every 20 ms
 // (useful for tuning). Set to -1 to turn it off.
+#define DEBUG true
 #define DEBUG_STREAM_KEY    0
 #define DEBUG_BUFFER_SIZE 96
 
