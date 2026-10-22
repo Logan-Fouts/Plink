@@ -19,5 +19,9 @@ Base: simple, cheap MIDI keyboard (Pico, USB MIDI, keyswitches)
 - Halleffect sensors (https://www.electrokit.com/en/ss49eua-to-92-hall-effektsensor-2mv/g)
 - Neopixels (https://www.digikey.com/en/products/detail/adafruit-industries-llc/1655/5154679)
 
+## Testing
+- `cd ~/Code/Plink/`
+- `cmake --build build/test`
+- `ctest --test-dir build/test --output-on-failure`
 
 Intended to be expanded on as the project grows
