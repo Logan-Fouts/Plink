@@ -2,6 +2,14 @@
 
 #include "config.h"
 
+void button_init(button_t *b, uint16_t rest_raw) {
+  b->state       = BUTTON_STATE_IDLE;
+  b->rest_raw    = rest_raw;
+  b->pressed_raw = (int32_t)rest_raw + HALL_DEFAULT_SPAN;
+  b->start_us    = 0;
+  b->position    = 0;
+}
+
 // Map the travel time between the two thresholds to a MIDI velocity.
 // Linear for now; a curve (e.g. square-root shaped) often feels better.
 static uint8_t travel_to_velocity(uint32_t dt_us) {
@@ -26,14 +34,6 @@ static int32_t compute_position(button_t *b, int32_t raw) {
   if (pos < 0)    pos = 0;
   if (pos > 1000) pos = 1000;
   return pos;
-}
-
-void button_init(button_t *b, uint16_t rest_raw) {
-  b->state       = BUTTON_STATE_IDLE;
-  b->rest_raw    = rest_raw;
-  b->pressed_raw = (int32_t)rest_raw + HALL_DEFAULT_SPAN;
-  b->start_us    = 0;
-  b->position    = 0;
 }
 
 button_event_t button_update(button_t *b, uint16_t raw, uint32_t now_us) {
