@@ -1,0 +1,196 @@
+(footprint "Neopixel 8mm THT"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "8mm NEO THT")
+	(property "Reference" "LED"
+		(at -0.075 -9.15 0)
+		(layer "F.SilkS")
+		(uuid "e5c20f69-264c-4c33-b170-2238df94d35d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "8mm NEO THT"
+		(at 0 -7.375 0)
+		(layer "F.Fab")
+		(uuid "a25ef8a6-cfc7-4ef1-aaf2-d9a81a7a75ae")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a59d6feb-beba-4224-aa32-e7298210c923")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "8mm NEO THT"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "63644bcc-9db6-4311-b1d2-23eaf1426316")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.163067 -2.448471)
+		(end -3.163067 2.44847)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "99f28eb7-1259-4246-a925-5f0ff210d028")
+	)
+	(fp_arc
+		(start -3.163067 -2.448471)
+		(mid 1.29378 -3.784988)
+		(end 4 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "f66dcd49-c847-4780-9617-a27a78f74010")
+	)
+	(fp_arc
+		(start 4 0)
+		(mid 1.302522 3.781988)
+		(end -3.151718 2.463061)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "6526a772-1137-49e9-90ae-8e4045abed36")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.8 3.8)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "37ee17aa-eac5-4b15-ad0a-6da14f235b8a")
+	)
+	(fp_text user "DATA OUT"
+		(at -1.82 -1.14 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "e127e632-c25e-49b3-a62c-f7662b6f8fb8")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "GND"
+		(at -0.35 -1.17 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "9065941f-ea41-4908-acd6-ec30ac5b3af3")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "5V"
+		(at 1 -1.15 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "69a17d07-b000-4918-9a10-6bd5fac6d51b")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "DATA IN"
+		(at 2.42 -1.06 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "e3e39bd3-01c3-4c30-8c17-45724e3673ac")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at -2.1 0)
+		(size 1.2 2)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "a6519a9a-900b-414c-8db5-2130705f048b")
+	)
+	(pad "2" thru_hole oval
+		(at -0.7 0)
+		(size 1.2 2)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "8735899e-eeff-477f-8bff-c365fe1ad50d")
+	)
+	(pad "3" thru_hole oval
+		(at 0.7 0)
+		(size 1.2 2)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "107b99fb-401b-4067-abc4-911c3fd8a51b")
+	)
+	(pad "4" thru_hole oval
+		(at 2.1 0)
+		(size 1.2 2)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "13bd2503-20fe-4d18-9334-45efd523a9db")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/logan/Downloads/8mm Neopixel.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

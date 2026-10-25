@@ -1,0 +1,381 @@
+(footprint "SS49 SIP-3 Hall Sensor"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SS49 SIP-3 Hall Sensor ")
+	(tags "Hall Sensor")
+	(property "Datasheet" "https://www.electrokit.com/upload/quick/65/e1/f986_SS49EUA.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "de042226-b08c-4cfd-89a6-f44172a126ab")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "SS49EUA Economical Linear Hall-effect sensor is small, versatile linear Hall -effect device that is operated by the magnetic field from a permanent magnet or an electromagnet."
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "997741d6-1fc7-4867-a1b4-d299db26497b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "SS49 SIP-3 Hall Sensor"
+		(at 0.75 -6 0)
+		(layer "F.Fab")
+		(uuid "8cc66929-3ba4-4733-8a76-fa7becf55842")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Reference" "U"
+		(at -4.25 -4 0)
+		(layer "F.SilkS")
+		(uuid "73adb71d-4be5-40a6-a3b1-7c3c704a0939")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2 -5.25)
+		(end -1.5 -4.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "57302fcf-4f55-4ce1-b756-be6b4e29bb99")
+	)
+	(fp_line
+		(start -2 -5.25)
+		(end 2 -5.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "08f66419-d9f8-48d0-833a-78429a055866")
+	)
+	(fp_line
+		(start -2 -2.25)
+		(end -2 -5.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "870eeda4-b3d3-4103-bdf0-7aac2f6a1376")
+	)
+	(fp_line
+		(start -2 -2.25)
+		(end -1.5 -2.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "38c459e1-8aaa-44ed-9aa3-75756be17f5b")
+	)
+	(fp_line
+		(start -2 -2.25)
+		(end 2 -2.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0b3b9d5f-0b94-4710-b853-ad79acf1e572")
+	)
+	(fp_line
+		(start -2 -1)
+		(end -2 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7aa1c9dc-31fa-4bf1-b075-3aa20538ffa3")
+	)
+	(fp_line
+		(start -2 -1)
+		(end -1.75 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "2158025f-11a9-4733-987d-e0f9be8d9286")
+	)
+	(fp_line
+		(start -2 1)
+		(end 2 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0cfa4fcc-d772-4ae1-96a0-ff0e4f5ba7db")
+	)
+	(fp_line
+		(start -1.5 -4.75)
+		(end -1.5 -2.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "9a27d1f7-cedf-488e-b7bc-91eb8a166c66")
+	)
+	(fp_line
+		(start -1.25 -1)
+		(end -1.25 -2.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "c38e00f3-5163-46e1-93d1-beb6316be9bc")
+	)
+	(fp_line
+		(start 0 -1)
+		(end 0 -2.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "80514888-0df6-4070-8304-3f62f12ba1fd")
+	)
+	(fp_line
+		(start 1.25 -2.25)
+		(end 1.25 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "44ab1546-fcd3-4e76-83e9-460efaeff99c")
+	)
+	(fp_line
+		(start 1.5 -4.75)
+		(end -1.5 -4.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "760c802f-c6b8-41ee-895e-4b6315c366d1")
+	)
+	(fp_line
+		(start 1.5 -2.75)
+		(end -1.5 -2.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "1e00233b-4c5f-4703-a55d-b9254066e7ba")
+	)
+	(fp_line
+		(start 1.5 -2.75)
+		(end 1.5 -4.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "89ebf0f9-0a50-4da7-9155-3876ec775441")
+	)
+	(fp_line
+		(start 1.5 -2.75)
+		(end 2 -2.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "93ae3cb5-91ec-4a0b-b3db-67bb120f6d75")
+	)
+	(fp_line
+		(start 1.75 -1)
+		(end 2 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "9ed76456-acb1-49ab-a7f1-22bf7f5d08c2")
+	)
+	(fp_line
+		(start 2 -5.25)
+		(end 1.5 -4.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "48b36f69-fc48-4145-8a0c-cc58e3428a12")
+	)
+	(fp_line
+		(start 2 -5.25)
+		(end 2 -2.25)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "d786b167-a889-4a6a-997c-8fcd9ca9133c")
+	)
+	(fp_line
+		(start 2 -1)
+		(end 2 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "2115070d-cbd4-4f50-b14c-855f3f6e575c")
+	)
+	(fp_rect
+		(start -2.25 -5.5)
+		(end 2.25 2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "4705963e-6c81-4387-be5a-e36cce1f81f3")
+	)
+	(fp_text user "OUT"
+		(at -2.5 1.75 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "b8d14e03-096d-4360-a140-06ab1560ef3b")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "GND"
+		(at -0.75 1.75 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "45e9d6b1-03e5-4737-ae6e-0f7abfcac41b")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "VCC"
+		(at 1 1.75 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "7b6262b0-8ed4-4d79-9cde-bd6b38ab7f7b")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "F.SilkS")
+		(uuid "13836927-7d6a-4722-90a5-e81b6fc1d509")
+		(pts
+			(xy 1.5 -2.25) (xy 1.5 0)
+		)
+		(height 3.75)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 2)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 0.5)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "2.25"
+			(at 4.65 -1.125 90)
+			(layer "F.SilkS")
+			(uuid "13836927-7d6a-4722-90a5-e81b6fc1d509")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.1)
+				)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at -1.27 0)
+		(size 1.2 2)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "8d8156ec-b5fd-4712-beb5-c5d8c3e23f8f")
+	)
+	(pad "2" thru_hole oval
+		(at 0 0)
+		(size 1.2 2)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "9192340e-fd1f-4700-9236-6a406b4304c8")
+	)
+	(pad "3" thru_hole oval
+		(at 1.27 0)
+		(size 1.2 2)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "88524d3e-c8a1-45d2-9eeb-16408218a05e")
+	)
+	(embedded_fonts no)
+	(model "//wsl.localhost/Ubuntu/home/lfouts/Code/Plink/hardware/plink_freecad/SS49 SIP-3 Hall Sensor-SS49 SIP-3 Body.step"
+		(offset
+			(xyz 0 2.2 0.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -180)
+		)
+	)
+)

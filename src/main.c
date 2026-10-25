@@ -11,6 +11,7 @@
 
 
 // TODO: Add a linter
+// TODO: Pitch Shifter?
 void core1_entry() {
 
   multicore_fifo_push_blocking(FLAG_VALUE);
