@@ -38,3 +38,4 @@ hardware/**/_autosave-*
 hardware/**/*.lck
 
 hardware/plink_kicad/.history/
+.history/

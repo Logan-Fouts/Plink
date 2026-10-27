@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "CD74HC4067_Breakout-eagle-import") (type "KiCad") (uri "${KIPRJMOD}/CD74HC4067_Breakout-eagle-import.kicad_sym") (options "") (descr ""))
+)
