@@ -328,6 +328,12 @@
 		(path "/6639c581-8640-437f-820b-84a7f2bb8db6")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -748,6 +754,12 @@
 		(path "/b72e8b2c-e887-46f6-aa28-45d9df048cf1")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1532,6 +1544,12 @@
 		(path "/a0fd4b03-315e-4d2d-844c-84a5ef2b0032")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2316,6 +2334,12 @@
 		(path "/44c2891c-1ee4-45a0-9944-13e83a9ff2a6")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2736,6 +2760,12 @@
 		(path "/18582556-bb02-4f0a-b9c6-3d6aad22e42b")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3884,6 +3914,12 @@
 		(path "/db8e1845-0f6f-40d2-8d53-06e2b01eb925")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4486,6 +4522,12 @@
 		(path "/b307a856-8143-4fe3-bb87-a345053119b2")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4906,6 +4948,12 @@
 		(path "/817f5ff8-cd0a-4c39-8ce9-8ca0819d7905")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5326,6 +5374,12 @@
 		(path "/bce2a1da-9212-45e2-a149-20d97d191696")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5928,6 +5982,12 @@
 		(path "/86902d87-9835-4fe7-8401-4757200b83e5")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6348,6 +6408,12 @@
 		(path "/dfe25a2c-80c7-4802-b741-f6f70e0d52d2")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7314,6 +7380,12 @@
 		(path "/3a2f2b48-4b9b-4bc1-9622-ef2a0946aef4")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7862,7 +7934,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "b0549d99-77a3-496b-af07-0a506ad786f1")
-		(at 243.0761 92.7436)
+		(at 242.3611 106.0736)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW1"
@@ -8162,7 +8234,7 @@
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(SW1-Pad1)")
+			(net "GND")
 			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "e6263703-92f2-40e5-9776-eda6847f06de")
@@ -8173,7 +8245,7 @@
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(SW1-Pad1)")
+			(net "GND")
 			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "0299937f-732d-44b9-a692-99b577377eed")
@@ -8184,7 +8256,7 @@
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(SW1-Pad2)")
+			(net "Net-(A1-GPIO5)")
 			(pinfunction "2_2")
 			(pintype "passive")
 			(uuid "4d8e1650-8418-4309-9cb1-b5bd0be9a43f")
@@ -8195,7 +8267,7 @@
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(SW1-Pad2)")
+			(net "Net-(A1-GPIO5)")
 			(pinfunction "2_2")
 			(pintype "passive")
 			(uuid "e7d60ee5-f266-4fa7-a81e-916be18541ff")
@@ -8398,7 +8470,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "b87d3e87-ead6-4ec4-8da9-33d386cf1129")
-		(at 243.3611 104.5736)
+		(at 242.6461 117.9036)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW2"
@@ -8698,7 +8770,7 @@
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(SW2-Pad1)")
+			(net "GND")
 			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "f22fd7ce-7807-4564-9fdd-ab2a1ece07d5")
@@ -8709,7 +8781,7 @@
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(SW2-Pad1)")
+			(net "GND")
 			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "bd205069-abe8-48e1-87f5-25eab86baf35")
@@ -8720,7 +8792,7 @@
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(SW2-Pad2)")
+			(net "Net-(A1-GPIO6)")
 			(pinfunction "2_2")
 			(pintype "passive")
 			(uuid "7e5cda80-df41-4d7c-a9f5-16881b619727")
@@ -8731,7 +8803,7 @@
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(SW2-Pad2)")
+			(net "Net-(A1-GPIO6)")
 			(pinfunction "2_2")
 			(pintype "passive")
 			(uuid "a3a90d29-4f84-4943-a511-c6de301a644b")
@@ -12348,6 +12420,12 @@
 		(path "/e427d5c5-6b3c-4dc0-a995-30f0c883e3be")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12768,6 +12846,12 @@
 		(path "/bce4088d-3b39-488e-8d3b-e73f8a8d4e2e")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13188,6 +13272,12 @@
 		(path "/72a9f430-fb35-4754-907f-845cd9fae7d2")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13608,6 +13698,12 @@
 		(path "/9e48f0c4-d7e1-4b88-9234-5222654d7bfa")
 		(sheetname "/")
 		(sheetfile "plink_kicad.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15610,7 +15706,7 @@
 			(size 3.2 1.6)
 			(layers "F.Cu" "F.Mask")
 			(roundrect_rratio 0.5)
-			(net "unconnected-(A1-GPIO5-Pad7)")
+			(net "Net-(A1-GPIO5)")
 			(pinfunction "GPIO5_7")
 			(pintype "bidirectional")
 			(uuid "8ff71d40-d24c-4d0b-a63d-5738407cd269")
@@ -15660,7 +15756,7 @@
 			(size 3.2 1.6)
 			(layers "F.Cu" "F.Mask")
 			(roundrect_rratio 0.5)
-			(net "unconnected-(A1-GPIO6-Pad9)")
+			(net "Net-(A1-GPIO6)")
 			(pinfunction "GPIO6_9")
 			(pintype "bidirectional")
 			(uuid "25227fc4-d365-4ba3-b6cb-e029f6a9883c")

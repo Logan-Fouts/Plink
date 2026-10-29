@@ -28,3 +28,14 @@ target_include_directories(test_button PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/../src
     ${CMAKE_CURRENT_SOURCE_DIR})
 add_test(NAME test_button COMMAND test_button)
+
+add_executable(test_pushbutton
+    input/test_pushbutton.c
+    ../src/input/push_button.c)
+target_link_libraries(test_pushbutton PRIVATE unity)
+target_include_directories(test_pushbutton PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/../src
+    ${CMAKE_CURRENT_SOURCE_DIR})
+add_test(NAME test_pushbutton COMMAND test_pushbutton)
+
+

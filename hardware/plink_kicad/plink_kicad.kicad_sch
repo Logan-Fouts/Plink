@@ -3447,6 +3447,16 @@
 	)
 	(wire
 		(pts
+			(xy 365.76 107.95) (xy 365.76 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08aa5d3b-70a9-49ad-9086-81dd7a58a14b")
+	)
+	(wire
+		(pts
 			(xy 276.86 207.01) (xy 325.12 207.01)
 		)
 		(stroke
@@ -3507,6 +3517,16 @@
 	)
 	(wire
 		(pts
+			(xy 365.76 115.57) (xy 365.76 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19658b58-aa00-4581-ab2e-ef1914788e7a")
+	)
+	(wire
+		(pts
 			(xy 165.1 207.01) (xy 213.36 207.01)
 		)
 		(stroke
@@ -3514,6 +3534,16 @@
 			(type default)
 		)
 		(uuid "1e88122e-f71f-4bc5-93ed-079a66e6291d")
+	)
+	(wire
+		(pts
+			(xy 365.76 115.57) (xy 384.81 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25118b04-5227-4030-b00b-16512c195ad8")
 	)
 	(wire
 		(pts
@@ -4254,6 +4284,16 @@
 			(type default)
 		)
 		(uuid "f4e341cb-16de-49e8-a59d-adefe6d3f1ee")
+	)
+	(wire
+		(pts
+			(xy 365.76 113.03) (xy 384.81 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f639b666-dd8f-40be-aac0-736a38dbaf5a")
 	)
 	(global_label "CH7"
 		(shape input)
@@ -5902,6 +5942,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 355.6 107.95 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0fc5f26f-0f43-4c40-93e8-5dbd79a44d3f")
+		(property "Reference" "#PWR071"
+			(at 349.25 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 351.536 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 355.6 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 355.6 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 355.6 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "53c10915-cfa1-4e16-95f2-17b1270a9d09")
+		)
+		(instances
+			(project "plink_kicad"
+				(path "/f6addac7-0ad3-463b-a67b-6d825c64d017"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 128.27 261.62 180)
 		(unit 1)
@@ -7001,7 +7118,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 191.77 44.45 0)
+		(at 360.68 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7012,7 +7129,7 @@
 		(fields_autoplaced yes)
 		(uuid "28297788-d0f4-44a4-b0a9-b4ce98cd8640")
 		(property "Reference" "SW1"
-			(at 191.77 36.83 0)
+			(at 360.68 100.33 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7022,7 +7139,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 191.77 39.37 0)
+			(at 360.68 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7032,7 +7149,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 191.77 39.37 0)
+			(at 360.68 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7043,7 +7160,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 191.77 39.37 0)
+			(at 360.68 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7054,7 +7171,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 191.77 44.45 0)
+			(at 360.68 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7713,6 +7830,83 @@
 			(project "plink_kicad"
 				(path "/f6addac7-0ad3-463b-a67b-6d825c64d017"
 					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 355.6 120.65 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3f747496-eda1-4581-a609-e0252fd3c752")
+		(property "Reference" "#PWR072"
+			(at 349.25 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 351.536 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 355.6 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 355.6 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 355.6 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ef6563b2-8c28-417d-9dc6-2a2a6369c9c1")
+		)
+		(instances
+			(project "plink_kicad"
+				(path "/f6addac7-0ad3-463b-a67b-6d825c64d017"
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)
@@ -12618,7 +12812,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 208.28 44.45 0)
+		(at 360.68 120.65 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12629,7 +12823,7 @@
 		(fields_autoplaced yes)
 		(uuid "c48371e2-4c23-4222-90ad-aab64d83a56c")
 		(property "Reference" "SW2"
-			(at 208.28 36.83 0)
+			(at 360.68 113.03 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12639,7 +12833,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 208.28 39.37 0)
+			(at 360.68 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12649,7 +12843,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 208.28 39.37 0)
+			(at 360.68 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12660,7 +12854,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 39.37 0)
+			(at 360.68 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12671,7 +12865,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 208.28 44.45 0)
+			(at 360.68 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

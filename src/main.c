@@ -6,6 +6,7 @@
 #include "input/keys.h"
 #include "leds/leds.h"
 #include "debug/debug.h"
+#include "input/controls.h"
 
 #define FLAG_VALUE 123 // Arbitrary value to pass between cores 1 and 2 for handshake
 
@@ -32,6 +33,7 @@ int main(void) {
   // Initialize the hardware and peripherals and start the USB stack on core 0
   stdio_init_all();
   tusb_init();
+  controls_init();
   keys_init();
   tud_task();
 
@@ -52,7 +54,9 @@ int main(void) {
     while (tud_midi_available()) tud_midi_packet_read(packet);
     while (tud_cdc_available())  tud_cdc_read_char();
 
-    keys_update(time_us_32());
+    uint32_t now_us = time_us_32();
+    controls_update(now_us);
+    keys_update(now_us);
     leds_update();                       // send LED changes (if any)
   }
 }

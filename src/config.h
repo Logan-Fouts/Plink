@@ -49,3 +49,10 @@
 #define LED_PRESSED_B       255
 #define LED_BITRATE_HZ      800000
 
+
+// ---- Transpose buttons (normal push buttons, pin to GND) ----
+#define TRANSPOSE_DOWN_PIN      14
+#define TRANSPOSE_UP_PIN        15
+#define TRANSPOSE_MIN           (-24)     // semitones
+#define TRANSPOSE_MAX           24
+#define PUSHBUTTON_DEBOUNCE_US  10000     // 10 ms

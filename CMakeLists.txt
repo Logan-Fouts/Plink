@@ -32,6 +32,8 @@ add_executable(plink
     src/input/button.c
     src/input/keys.c
     src/input/mux.c
+    src/input/controls.c
+    src/input/push_button.c
     src/leds/leds.c
     src/hardware/rp2040/mux_hw_rp2040.c
     src/hardware/rp2040/utils_hw_rp2040.c
