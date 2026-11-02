@@ -10,6 +10,7 @@ static const uint8_t select_pins[4] = MUX_SELECT_PINS;
 void mux_hw_init(void) {
   adc_init();
   adc_gpio_init(MUX_ADC_GPIO);
+  gpio_pull_down(MUX_ADC_GPIO);
   adc_select_input(MUX_ADC_GPIO - ADC_FIRST_GPIO);  // Sets the ADC input source pin.
   for (int i = 0; i < MUX_SELECT_PIN_COUNT; i++) {
     gpio_init(select_pins[i]);

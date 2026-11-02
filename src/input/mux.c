@@ -17,7 +17,7 @@ void mux_init(void) {
  * @brief Read one MUX channel, averaged over MUX_SAMPLES ADC readings.
  *
  * Selects the channel, waits MUX_SETTLE_US for the signal to settle,
- * then averages the samples. Blocks for the duration.
+ * discards one conversion, then averages the samples. Blocks for the duration.
  *
  * @param channel Channel index, associated with a key.
  * @return Averaged raw ADC value (12-bit, 0-4095).
@@ -33,6 +33,11 @@ uint16_t mux_read(int channel) {
 
   // Let readings settle on new channel
   utils_hw_sleep(MUX_SETTLE_US);
+
+  // Throw away the first conversion: the ADC's sample-and-hold capacitor
+  // still carries charge from the previous channel, which makes a pressed
+  // key bleed into the next channel read (neighbouring keys "press" too).
+  (void)mux_hw_read_adc();
 
   // Take readings and average them
   uint32_t sum = 0;

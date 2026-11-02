@@ -55,4 +55,7 @@ target_link_libraries(plink
     pico_multicore
 )
 
+# GP0/GP1 are used as mux select lines (S0/S1), so keep the UART off them.
+pico_enable_stdio_uart(plink 0)
+
 pico_add_extra_outputs(plink)

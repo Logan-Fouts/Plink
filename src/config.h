@@ -2,14 +2,19 @@
 
 // ---- Keys ----
 // Each entry is { mux channel, MIDI note }.
-#define KEY_COUNT           1
-#define KEY_MAP             { {0, 60} }
+#define KEY_COUNT           16
+#define KEY_MAP             { \
+    { 0, 60}, { 1, 61}, { 2, 62}, { 3, 63}, \
+    { 4, 64}, { 5, 65}, { 6, 66}, { 7, 67}, \
+    { 8, 68}, { 9, 69}, {10, 70}, {11, 71}, \
+    {12, 72}, {13, 73}, {14, 74}, {15, 75}  \
+}
 
 // ---- Analog multiplexer (CD74HC4067) ----
-#define MUX_SELECT_PINS     { 10, 11, 12, 13 }   // S0..S3
+#define MUX_SELECT_PINS     { 0, 1, 2, 3 }   // S0..S3
 #define MUX_SELECT_PIN_COUNT 4
 #define MUX_ADC_GPIO        26                   // SIG -> GP26 (ADC0)
-#define MUX_SETTLE_US       10
+#define MUX_SETTLE_US       10                   // after switching channel; too short = crosstalk
 #define MUX_SAMPLES         4                    // ADC reads averaged per key
 
 // ---- Hall sensor / key travel ----
@@ -24,6 +29,9 @@
 // whenever a key goes further than this.
 #define HALL_DEFAULT_SPAN       400
 #define HALL_CALIBRATION_READS  32    // readings averaged for the resting value
+// A key whose resting reading is below this at power-up has no sensor
+// connected (SIG is pulled down) and is ignored until the next reset.
+#define HALL_DISCONNECTED_RAW   100
 
 // ---- Velocity ----
 // Time between LOW and HIGH thresholds -> velocity. Tune with real data.
@@ -51,8 +59,8 @@
 
 
 // ---- Transpose buttons (normal push buttons, pin to GND) ----
-#define TRANSPOSE_DOWN_PIN      14
-#define TRANSPOSE_UP_PIN        15
+#define TRANSPOSE_DOWN_PIN      18
+#define TRANSPOSE_UP_PIN        19
 #define TRANSPOSE_MIN           (-24)     // semitones
 #define TRANSPOSE_MAX           24
 #define PUSHBUTTON_DEBOUNCE_US  10000     // 10 ms

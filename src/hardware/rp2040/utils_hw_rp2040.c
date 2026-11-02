@@ -17,6 +17,10 @@ bool utils_hw_tud_connected(void) {
   return(tud_cdc_connected());
 }
 
+bool utils_hw_usb_mounted(void) {
+  return(tud_mounted());
+}
+
 uint32_t time_us(void) {
   return(time_us_32());
 }
