@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 project(firmware_tests C)
 
 set(CMAKE_C_STANDARD 11)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)  # for clang-tidy / clangd
 enable_testing()
 
 # Build Unity as a small library

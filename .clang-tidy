@@ -1,0 +1,44 @@
+# Static analysis for Plink. Run with:  scripts/lint.sh
+# Focused on real bugs for embedded C, not style nitpicks (clang-format owns style).
+---
+# Disabled on purpose:
+#   bugprone-signed-bitwise               flags every `status | channel`; too noisy for MIDI/register code
+#   readability-implicit-bool-conversion  Pico SDK takes bool for GPIO levels; 0/1 is idiomatic
+#   readability-magic-numbers             config.h already names the values that matter
+#   portability-avoid-pragma-once         #pragma once is fine with GCC/Clang
+Checks: >
+  -*,
+  bugprone-*,
+  -bugprone-easily-swappable-parameters,
+  -bugprone-reserved-identifier,
+  -bugprone-assignment-in-if-condition,
+  -bugprone-signed-bitwise,
+  cert-*,
+  -cert-dcl37-c,
+  -cert-dcl51-cpp,
+  -cert-err33-c,
+  clang-analyzer-*,
+  -clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling,
+  misc-*,
+  -misc-include-cleaner,
+  -misc-unused-parameters,
+  performance-*,
+  portability-*,
+  -portability-avoid-pragma-once,
+  readability-*,
+  -readability-magic-numbers,
+  -readability-identifier-length,
+  -readability-function-cognitive-complexity,
+  -readability-isolate-declaration,
+  -readability-avoid-const-params-in-decls,
+  -readability-uppercase-literal-suffix,
+  -readability-braces-around-statements,
+  -readability-math-missing-parentheses,
+  -readability-avoid-nested-conditional-operator,
+  -readability-trailing-comma,
+  -readability-implicit-bool-conversion
+
+WarningsAsErrors: '*'          # any finding fails scripts/lint.sh
+# Header filter is set to this repo's src/ by scripts/lint.sh (keeps Pico SDK/TinyUSB out)
+FormatStyle: file
+...

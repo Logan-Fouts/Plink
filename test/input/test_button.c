@@ -2,11 +2,13 @@
 #include "input/button.h"
 #include "config.h"
 
-#define REST 1000   // pretend resting ADC reading
+#define REST 1000  // pretend resting ADC reading
 
 static button_t b;
 
-void setUp(void)    { button_init(&b, REST); }
+void setUp(void) {
+  button_init(&b, REST);
+}
 void tearDown(void) {}
 
 // Raw ADC value for a position (0-1000 per mille of travel), using the
@@ -42,8 +44,8 @@ void test_slow_press_gives_min_velocity(void) {
 }
 
 void test_medium_press_is_between(void) {
-  uint32_t dt = (VELOCITY_FAST_US + VELOCITY_SLOW_US) / 2;
-  button_event_t e = press(250, 750, 1000, dt);
+  uint32_t       dt = (VELOCITY_FAST_US + VELOCITY_SLOW_US) / 2;
+  button_event_t e  = press(250, 750, 1000, dt);
   TEST_ASSERT_EQUAL(BUTTON_EVENT_PRESSED, e.type);
   TEST_ASSERT_GREATER_THAN_UINT8(1, e.velocity);
   TEST_ASSERT_LESS_THAN_UINT8(127, e.velocity);

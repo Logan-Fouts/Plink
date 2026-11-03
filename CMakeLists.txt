@@ -21,6 +21,7 @@ include(pico_sdk_import.cmake)
 
 project(plink C CXX ASM)
 set(CMAKE_C_STANDARD 11)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 pico_sdk_init()
 

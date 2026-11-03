@@ -39,3 +39,6 @@ hardware/**/*.lck
 
 hardware/plink_kicad/.history/
 .history/
+
+# Python venv for dev tools (requirements-dev.txt)
+.venv/

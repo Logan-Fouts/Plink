@@ -10,7 +10,7 @@ void mux_fake_reset(void) {
   adc_value = 0;
 }
 
-int  mux_fake_pin_level(int pin) {
+int mux_fake_pin_level(int pin) {
   return pin_levels[pin];
 }
 
@@ -21,7 +21,7 @@ void mux_fake_set_adc_value(uint16_t v) {
 // Function Squatting
 void mux_hw_init(void) {}
 
-void mux_hw_set_select_pin(int i, int level) { 
+void mux_hw_set_select_pin(int i, int level) {
   pin_levels[i] = level;
 }
 

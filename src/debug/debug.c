@@ -6,9 +6,9 @@
 #include <stdio.h>
 
 void debug_printf(const char *fmt, ...) {
-  if (!utils_hw_tud_connected() || !DEBUG) return;   // No terminal open or debugging off, skip
+  if (!utils_hw_tud_connected() || !DEBUG) return;  // No terminal open or debugging off, skip
 
-  char buf[DEBUG_BUFFER_SIZE];
+  char    buf[DEBUG_BUFFER_SIZE];
   va_list args;
   va_start(args, fmt);
   vsnprintf(buf, sizeof(buf), fmt, args);

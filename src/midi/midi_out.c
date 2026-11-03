@@ -4,10 +4,9 @@
 #include "hardware/utils_hw.h"
 
 static void send3(uint8_t status, uint8_t d1, uint8_t d2) {
-  if (!utils_hw_usb_mounted()) return;                 // host not connected yet
-  uint8_t msg[3] = { (uint8_t)(status | MIDI_CHANNEL), d1, d2 };
+  if (!utils_hw_usb_mounted()) return;  // host not connected yet
+  uint8_t msg[3] = {(uint8_t)(status | MIDI_CHANNEL), d1, d2};
   utils_hw_midi_stream_write(0, msg, 3);
-
 }
 
 void midi_send_note_on(uint8_t note, uint8_t velocity) {

@@ -4,22 +4,14 @@
 #include <stdint.h>
 
 // Where a key is in its press.
-typedef enum {
-  BUTTON_STATE_IDLE,
-  BUTTON_STATE_TRAVELLING,
-  BUTTON_STATE_DOWN
-} button_state_t;
+typedef enum { BUTTON_STATE_IDLE, BUTTON_STATE_TRAVELLING, BUTTON_STATE_DOWN } button_state_t;
 
-typedef enum {
-  BUTTON_EVENT_NONE,
-  BUTTON_EVENT_PRESSED,
-  BUTTON_EVENT_RELEASED
-} button_event_type_t;
+typedef enum { BUTTON_EVENT_NONE, BUTTON_EVENT_PRESSED, BUTTON_EVENT_RELEASED } button_event_type_t;
 
 typedef struct {
   button_event_type_t type;
-  uint8_t  velocity;     // 1-127, only valid for PRESSED
-  uint32_t travel_us;    // time between the two thresholds (for tuning)
+  uint8_t             velocity;   // 1-127, only valid for PRESSED
+  uint32_t            travel_us;  // time between the two thresholds (for tuning)
 } button_event_t;
 
 // One Hall-effect key. It owns its calibration and state, so one update
@@ -27,10 +19,10 @@ typedef struct {
 // you hand it a raw reading.
 typedef struct {
   button_state_t state;
-  int32_t  rest_raw;      // reading with the key up
-  int32_t  pressed_raw;   // reading with the key fully down (auto-extends)
-  uint32_t start_us;      // when the LOW threshold was crossed
-  int32_t  position;      // last position, 0..1000
+  int32_t        rest_raw;     // reading with the key up
+  int32_t        pressed_raw;  // reading with the key fully down (auto-extends)
+  uint32_t       start_us;     // when the LOW threshold was crossed
+  int32_t        position;     // last position, 0..1000
 } button_t;
 
 // Call once with the resting reading (key not pressed).

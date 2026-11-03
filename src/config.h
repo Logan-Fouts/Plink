@@ -2,6 +2,7 @@
 
 // ---- Keys ----
 // Each entry is { mux channel, MIDI note }.
+// clang-format off
 #define KEY_COUNT           16
 #define KEY_MAP             { \
     { 0, 60}, { 1, 61}, { 2, 62}, { 3, 63}, \
@@ -9,58 +10,59 @@
     { 8, 68}, { 9, 69}, {10, 70}, {11, 71}, \
     {12, 72}, {13, 73}, {14, 74}, {15, 75}  \
 }
+// clang-format on
 
 // ---- Analog multiplexer (CD74HC4067) ----
-#define MUX_SELECT_PINS     { 0, 1, 2, 3 }   // S0..S3
+#define MUX_SELECT_PINS      {0, 1, 2, 3}  // S0..S3
 #define MUX_SELECT_PIN_COUNT 4
-#define MUX_ADC_GPIO        26                   // SIG -> GP26 (ADC0)
-#define MUX_SETTLE_US       10                   // after switching channel; too short = crosstalk
-#define MUX_SAMPLES         4                    // ADC reads averaged per key
+#define MUX_ADC_GPIO         26            // SIG -> GP26 (ADC0)
+#define MUX_SETTLE_US        10            // after switching channel; too short = crosstalk
+#define MUX_SAMPLES          4             // ADC reads averaged per key
 
 // ---- Hall sensor / key travel ----
 // Position is 0..1000 (per mille of travel).
-#define HALL_THRESHOLD_LOW      200   // timing starts when travel passes this
-#define HALL_THRESHOLD_HIGH     700   // note is sent when travel passes this
-#define HALL_THRESHOLD_RELEASE  150   // key counts as released below this
+#define HALL_THRESHOLD_LOW     200  // timing starts when travel passes this
+#define HALL_THRESHOLD_HIGH    700  // note is sent when travel passes this
+#define HALL_THRESHOLD_RELEASE 150  // key counts as released below this
+#define DEFAULT_SPAN           1000
 
 // Expected ADC change from rest to fully pressed (12-bit counts, 0-4095).
 // Positive if the reading RISES when pressed, negative if it FALLS.
 // Use a conservative (small) value: the real span is learned automatically
 // whenever a key goes further than this.
-#define HALL_DEFAULT_SPAN       400
-#define HALL_CALIBRATION_READS  32    // readings averaged for the resting value
+#define HALL_DEFAULT_SPAN      400
+#define HALL_CALIBRATION_READS 32  // readings averaged for the resting value
 // A key whose resting reading is below this at power-up has no sensor
 // connected (SIG is pulled down) and is ignored until the next reset.
-#define HALL_DISCONNECTED_RAW   100
+#define HALL_DISCONNECTED_RAW  100
 
 // ---- Velocity ----
 // Time between LOW and HIGH thresholds -> velocity. Tune with real data.
-#define VELOCITY_FAST_US    2000      // this fast or faster = 127
-#define VELOCITY_SLOW_US    60000     // this slow or slower = 1
+#define VELOCITY_FAST_US 2000   // this fast or faster = 127
+#define VELOCITY_SLOW_US 60000  // this slow or slower = 1
 
 // ---- MIDI ----
-#define MIDI_CHANNEL        0         // 0 = channel 1
+#define MIDI_CHANNEL 0  // 0 = channel 1
 
 // ---- Debug ----
 // Stream raw ADC + position of this key over serial every 20 ms
 // (useful for tuning). Set to -1 to turn it off.
-#define DEBUG true
-#define DEBUG_STREAM_KEY    0
+#define DEBUG             true
+#define DEBUG_STREAM_KEY  0
 #define DEBUG_BUFFER_SIZE 96
 
 // ---- LEDs (NeoPixel / WS2812, one per key) ----
-#define LED_PIN             16
-#define LED_COUNT           KEY_COUNT
-#define LED_BRIGHTNESS      64            // 0-255, global (full white draws ~60 mA per LED)
-#define LED_PRESSED_R       0
-#define LED_PRESSED_G       120
-#define LED_PRESSED_B       255
-#define LED_BITRATE_HZ      800000
-
+#define LED_PIN        16
+#define LED_COUNT      KEY_COUNT
+#define LED_BRIGHTNESS 64  // 0-255, global (full white draws ~60 mA per LED)
+#define LED_PRESSED_R  0
+#define LED_PRESSED_G  120
+#define LED_PRESSED_B  255
+#define LED_BITRATE_HZ 800000
 
 // ---- Transpose buttons (normal push buttons, pin to GND) ----
-#define TRANSPOSE_DOWN_PIN      18
-#define TRANSPOSE_UP_PIN        19
-#define TRANSPOSE_MIN           (-24)     // semitones
-#define TRANSPOSE_MAX           24
-#define PUSHBUTTON_DEBOUNCE_US  10000     // 10 ms
+#define TRANSPOSE_DOWN_PIN     18
+#define TRANSPOSE_UP_PIN       19
+#define TRANSPOSE_MIN          (-24)  // semitones
+#define TRANSPOSE_MAX          24
+#define PUSHBUTTON_DEBOUNCE_US 10000  // 10 ms

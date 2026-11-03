@@ -6,11 +6,10 @@
 #include "fakes/mux_hw_fake.h"
 #include "fakes/utils_hw_fake.h"
 
-
 void setUp(void) {
   mux_fake_reset();
   utils_fake_reset();
-  srand(time(NULL));              // seed rand
+  srand(time(NULL));  // seed rand
 }
 
 void tearDown(void) {}
@@ -22,10 +21,10 @@ void test_read_returns_adc_value_when_all_samples_equal(void) {
 
 void test_random_adc_readings(void) {
   int expected_total = 0;
-  int result = 0;
+  int result         = 0;
   for (int i = 0; i < 4; i++) {
     int reading = rand() % 380 + 20;
-    mux_fake_set_adc_value(reading); // 20 -> 400 for semi relistic readings
+    mux_fake_set_adc_value(reading);  // 20 -> 400 for semi relistic readings
     result += mux_read(0);
     expected_total += reading;
   }
@@ -34,7 +33,7 @@ void test_random_adc_readings(void) {
 }
 
 void test_read_channel_5_sets_pins_1_0_1_0(void) {
-  mux_read(5);                              // 0b0101, pin 0 is the LSB
+  mux_read(5);  // 0b0101, pin 0 is the LSB
   TEST_ASSERT_EQUAL(1, mux_fake_pin_level(0));
   TEST_ASSERT_EQUAL(0, mux_fake_pin_level(1));
   TEST_ASSERT_EQUAL(1, mux_fake_pin_level(2));
@@ -42,7 +41,7 @@ void test_read_channel_5_sets_pins_1_0_1_0(void) {
 }
 
 void test_read_channel_15_sets_pins(void) {
-  mux_read(15);                              // 0b0101, pin 0 is the LSB
+  mux_read(15);  // 0b0101, pin 0 is the LSB
   TEST_ASSERT_EQUAL(1, mux_fake_pin_level(0));
   TEST_ASSERT_EQUAL(1, mux_fake_pin_level(1));
   TEST_ASSERT_EQUAL(1, mux_fake_pin_level(2));

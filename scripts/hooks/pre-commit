@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Auto-format staged C files with clang-format before each commit.
+# Enable once per clone:  scripts/install-hooks.sh
+set -euo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+CLANG_FORMAT="${CLANG_FORMAT:-}"
+if [[ -z "$CLANG_FORMAT" ]]; then
+  if [[ -x .venv/bin/clang-format ]]; then CLANG_FORMAT=.venv/bin/clang-format
+  else CLANG_FORMAT=clang-format; fi
+fi
+if ! command -v "$CLANG_FORMAT" >/dev/null 2>&1; then
+  echo "pre-commit: clang-format not found, skipping auto-format (see requirements-dev.txt)." >&2
+  exit 0
+fi
+
+mapfile -t staged < <(git diff --cached --name-only --diff-filter=ACMR -- \
+  'src/*.c' 'src/*.h' 'test/*.c' 'test/*.h')
+[[ ${#staged[@]} -eq 0 ]] && exit 0
+
+partial=()
+for f in "${staged[@]}"; do
+  if git diff --quiet -- "$f"; then
+    # Fully staged: safe to format in place and re-stage.
+    "$CLANG_FORMAT" -i "$f"
+    git add -- "$f"
+  elif ! git show ":$f" | "$CLANG_FORMAT" --assume-filename="$f" --dry-run --Werror >/dev/null 2>&1; then
+    # Partially staged and unformatted: don't touch the working tree, just stop.
+    partial+=("$f")
+  fi
+done
+
+if [[ ${#partial[@]} -gt 0 ]]; then
+  echo "pre-commit: these partially-staged files need formatting:" >&2
+  printf '  %s\n' "${partial[@]}" >&2
+  echo "Run scripts/format.sh, re-stage, and commit again." >&2
+  exit 1
+fi

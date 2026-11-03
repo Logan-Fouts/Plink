@@ -1,0 +1,40 @@
+# Plink C style. Apply with:  scripts/format.sh
+# Use the version pinned in requirements-dev.txt; other versions may format slightly differently.
+---
+Language: Cpp
+BasedOnStyle: LLVM
+
+IndentWidth: 2
+ContinuationIndentWidth: 4
+ColumnLimit: 100
+UseTab: Never
+
+PointerAlignment: Right            # button_t *b
+BreakBeforeBraces: Attach
+
+# Keep the compact one-liners used throughout the firmware
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: true
+
+# Line up the tables in config.h and struct definitions
+AlignConsecutiveMacros: AcrossComments
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 1
+AlignEscapedNewlines: Left
+AlignOperands: Align
+SpacesBeforeTrailingComments: 2
+
+# Include order can matter for the Pico SDK / TinyUSB headers, so leave it alone
+SortIncludes: Never
+IncludeBlocks: Preserve
+
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+InsertNewlineAtEOF: true
+...

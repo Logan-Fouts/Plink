@@ -23,7 +23,6 @@ void mux_init(void) {
  * @return Averaged raw ADC value (12-bit, 0-4095).
  */
 uint16_t mux_read(int channel) {
-  
   if (channel < 0) return 0;
 
   // Switch to correct ADC channel with 4 select pins
