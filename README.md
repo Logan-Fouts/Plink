@@ -1,5 +1,9 @@
 # Plink
 
+<p align="center">
+  <img src="docs/Plink%20Banner.png" alt="Renders of the Plink keyboard: top-down view of the PCB and top plate with green Hall-effect switches and glowing blue NeoPixels, a three-quarter view, and a close-up of the switches" width="100%">
+</p>
+
 **A low-cost, velocity-sensitive USB MIDI keyboard built on the Raspberry Pi Pico, using Hall-effect key switches.**
 
 Plink reads 16 magnetic (Hall-effect) key switches through an analog multiplexer, works out how fast each key was pressed, and sends MIDI notes with velocity over USB. Each key has its own NeoPixel LED, and two front-panel buttons transpose the keyboard up or down.
