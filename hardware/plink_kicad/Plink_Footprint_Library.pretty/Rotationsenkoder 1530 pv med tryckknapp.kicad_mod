@@ -6,7 +6,7 @@
 	(property "Reference" "Ref**"
 		(at 2.5 19.6 0)
 		(layer "F.SilkS")
-		(uuid "7010aa38-7cff-4e5e-8eb4-fb622ab3be49")
+		(uuid "c14a7ec8-204e-4f99-8642-939633777673")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16,7 +16,7 @@
 	(property "Value" "Rotationsenkoder 1530 pv med tryckknapp"
 		(at 2.5 19.6 0)
 		(layer "F.Fab")
-		(uuid "2aae93ac-d989-4031-b0b0-62aca6fde082")
+		(uuid "eefcbc12-f463-4306-8774-97461822fa54")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -27,7 +27,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "44ec7f40-ff41-4f44-b278-1ad2b25f87c6")
+		(uuid "41f5a79f-3100-4551-9bde-161a8a8f3b50")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -38,7 +38,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "937e349b-eb17-4fb2-aea3-3dd5fed9054a")
+		(uuid "4173678a-4683-474b-be72-a844befccabf")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -54,7 +54,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "3d508118-3d27-41dd-8234-20443f129f32")
+		(uuid "8d5292d2-6260-42e2-b58f-c64d69605379")
 	)
 	(fp_line
 		(start -5.4 4.5)
@@ -64,7 +64,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "92d312f4-5e9f-422f-9c6c-bb3b946bd471")
+		(uuid "b2b56e6a-cb6b-483d-9908-87116bf434ad")
 	)
 	(fp_line
 		(start -5.4 9.6)
@@ -74,7 +74,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "a3737c54-f2e5-4886-8429-49ed96f25fc9")
+		(uuid "1085bc9e-b455-43f9-ab90-b6f999154667")
 	)
 	(fp_line
 		(start -3.9 -3.6)
@@ -84,17 +84,17 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "99e4c584-44a0-4ffc-8432-904013aafbea")
+		(uuid "0c817e29-565f-4199-b017-6a308397fbed")
 	)
 	(fp_line
 		(start -1.1 -3.6)
-		(end 1.3 -3.6)
+		(end 1.2 -3.6)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "cbfad06b-7a6d-45f1-817c-a2690aec5c8e")
+		(uuid "352a60c9-f35f-478b-bf13-e018796631da")
 	)
 	(fp_line
 		(start 3.9 9.6)
@@ -104,17 +104,17 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "02dad77c-3952-4f26-901c-b0f5f5e3f1a3")
+		(uuid "c1beaf14-2f8d-4c87-90fe-7be4353ff585")
 	)
 	(fp_line
 		(start 5.5 -3.6)
-		(end 3.9 -3.6)
+		(end 4 -3.6)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "0994fa44-9679-4f19-88f8-4b5d74d31c66")
+		(uuid "6e3f11ed-84c6-4432-a02a-e65223a4ac09")
 	)
 	(fp_line
 		(start 5.5 1.2)
@@ -124,7 +124,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "0ecd4d24-77e6-408b-a226-01d1252a9832")
+		(uuid "ef93dbdd-84af-4d26-971a-0af556ec3938")
 	)
 	(fp_line
 		(start 5.6 9.6)
@@ -134,7 +134,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "d00cc17c-e0b5-4239-9dd1-09e994e42008")
+		(uuid "d7b69f4a-b598-4a16-8ee4-42ece36c4df2")
 	)
 	(fp_circle
 		(center 0 3)
@@ -145,50 +145,12 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "73087f22-5809-4199-bf0a-7f33dc5544dd")
+		(uuid "5e773c39-2f01-4921-bcb8-255118b65562")
 	)
 	(dimension
 		(type orthogonal)
-		(layer "F.SilkS")
-		(uuid "10567b2b-4842-4b70-81ad-11fc8c5c35cf")
-		(pts
-			(xy 0 3) (xy 6.7 3)
-		)
-		(height 0)
-		(orientation 0)
-		(format
-			(prefix "")
-			(suffix "")
-			(units 3)
-			(units_format 0)
-			(precision 4)
-			(suppress_zeroes yes)
-		)
-		(style
-			(thickness 0.1)
-			(arrow_length 1.27)
-			(text_position_mode 0)
-			(arrow_direction outward)
-			(extension_height 0.58642)
-			(extension_offset 0.5)
-			(keep_text_aligned yes)
-		)
-		(gr_text "6.7"
-			(at 3.35 1.9 0)
-			(layer "F.SilkS")
-			(uuid "10567b2b-4842-4b70-81ad-11fc8c5c35cf")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-			)
-		)
-	)
-	(dimension
-		(type orthogonal)
-		(layer "F.SilkS")
-		(uuid "d41e90aa-b49b-4d81-a580-509d0437b603")
+		(layer "Dwgs.User")
+		(uuid "48bdb61c-8cab-4edc-8c3d-18dd0b491a73")
 		(pts
 			(xy 0 3) (xy -6.5 3)
 		)
@@ -213,46 +175,8 @@
 		)
 		(gr_text "6.5"
 			(at -3.25 1.9 0)
-			(layer "F.SilkS")
-			(uuid "d41e90aa-b49b-4d81-a580-509d0437b603")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-			)
-		)
-	)
-	(dimension
-		(type orthogonal)
-		(layer "Dwgs.User")
-		(uuid "69dca027-1bf2-4e6d-ada1-3d165e164a0f")
-		(pts
-			(xy -2.5 -6.2) (xy 2.5 -6.2)
-		)
-		(height -0.7)
-		(orientation 0)
-		(format
-			(prefix "")
-			(suffix "")
-			(units 3)
-			(units_format 0)
-			(precision 4)
-			(suppress_zeroes yes)
-		)
-		(style
-			(thickness 0.1)
-			(arrow_length 1.27)
-			(text_position_mode 0)
-			(arrow_direction outward)
-			(extension_height 0.58642)
-			(extension_offset 0.5)
-			(keep_text_aligned yes)
-		)
-		(gr_text "5"
-			(at 0 -8 0)
 			(layer "Dwgs.User")
-			(uuid "69dca027-1bf2-4e6d-ada1-3d165e164a0f")
+			(uuid "48bdb61c-8cab-4edc-8c3d-18dd0b491a73")
 			(effects
 				(font
 					(size 1 1)
@@ -264,45 +188,7 @@
 	(dimension
 		(type orthogonal)
 		(layer "Dwgs.User")
-		(uuid "9ff0e448-3f81-4f25-83c0-806dc952c29a")
-		(pts
-			(xy 8.6 2.8) (xy 8.6 10.3)
-		)
-		(height 0.1)
-		(orientation 1)
-		(format
-			(prefix "")
-			(suffix "")
-			(units 3)
-			(units_format 0)
-			(precision 4)
-			(suppress_zeroes yes)
-		)
-		(style
-			(thickness 0.1)
-			(arrow_length 1.27)
-			(text_position_mode 0)
-			(arrow_direction outward)
-			(extension_height 0.58642)
-			(extension_offset 0.5)
-			(keep_text_aligned yes)
-		)
-		(gr_text "7.5"
-			(at 7.6 6.55 90)
-			(layer "Dwgs.User")
-			(uuid "9ff0e448-3f81-4f25-83c0-806dc952c29a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-			)
-		)
-	)
-	(dimension
-		(type orthogonal)
-		(layer "Dwgs.User")
-		(uuid "cd055af4-7188-4c6f-9eb4-d8548d0d17b8")
+		(uuid "564d0318-837c-4b45-b087-3daf612e0167")
 		(pts
 			(xy 8.7 -4.3) (xy 8.7 2.7)
 		)
@@ -328,7 +214,7 @@
 		(gr_text "7"
 			(at 7.6 -0.8 90)
 			(layer "Dwgs.User")
-			(uuid "cd055af4-7188-4c6f-9eb4-d8548d0d17b8")
+			(uuid "564d0318-837c-4b45-b087-3daf612e0167")
 			(effects
 				(font
 					(size 1 1)
@@ -340,7 +226,7 @@
 	(dimension
 		(type orthogonal)
 		(layer "Dwgs.User")
-		(uuid "fdaa698d-acbe-4ca5-9846-1465682d205a")
+		(uuid "8c896b3d-1f66-4b43-a9bc-226121a9bf17")
 		(pts
 			(xy -6 -9.8) (xy 6.2 -9.8)
 		)
@@ -366,7 +252,121 @@
 		(gr_text "12.2"
 			(at 0.1 -10 0)
 			(layer "Dwgs.User")
-			(uuid "fdaa698d-acbe-4ca5-9846-1465682d205a")
+			(uuid "8c896b3d-1f66-4b43-a9bc-226121a9bf17")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Dwgs.User")
+		(uuid "9cbc4191-e1cc-4085-a6b9-65b0e5066d2f")
+		(pts
+			(xy -2.5 -6.2) (xy 2.5 -6.2)
+		)
+		(height -0.7)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "5"
+			(at 0 -8 0)
+			(layer "Dwgs.User")
+			(uuid "9cbc4191-e1cc-4085-a6b9-65b0e5066d2f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Dwgs.User")
+		(uuid "c5a41e67-66e8-43fe-9fb9-bfccd5cd4e54")
+		(pts
+			(xy 0 3) (xy 6.7 3)
+		)
+		(height 0)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "6.7"
+			(at 3.35 1.9 0)
+			(layer "Dwgs.User")
+			(uuid "c5a41e67-66e8-43fe-9fb9-bfccd5cd4e54")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Dwgs.User")
+		(uuid "f75d20cf-1fdf-44e3-a467-c6bfa2f89b70")
+		(pts
+			(xy 8.6 2.8) (xy 8.6 10.3)
+		)
+		(height 0.1)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "7.5"
+			(at 7.6 6.55 90)
+			(layer "Dwgs.User")
+			(uuid "f75d20cf-1fdf-44e3-a467-c6bfa2f89b70")
 			(effects
 				(font
 					(size 1 1)
@@ -382,7 +382,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(zone_connect 2)
-		(uuid "45b0b153-3293-48e8-bb36-8a5460000175")
+		(uuid "1b83f8ce-6181-4755-baa9-9d2255058171")
 	)
 	(pad "2" thru_hole oval
 		(at 2.6 10.3 180)
@@ -391,7 +391,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(zone_connect 2)
-		(uuid "76b163dd-1348-4a34-8e79-324f564b8c86")
+		(uuid "cd036536-1e5a-4394-b8ac-79fe215bde02")
 	)
 	(pad "3" thru_hole oval
 		(at 0 10.3 180)
@@ -400,7 +400,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(zone_connect 2)
-		(uuid "023dd4de-9dab-4cca-83d9-a524406e227e")
+		(uuid "7a787585-d164-4af3-83ba-56b7af5ab150")
 	)
 	(pad "4" thru_hole oval
 		(at -2.5 -4.3 180)
@@ -409,7 +409,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(zone_connect 2)
-		(uuid "6478b3d6-489d-41e7-b574-dfe2219bc9fb")
+		(uuid "3f11d275-f321-44c3-986a-6247d38f64e7")
 	)
 	(pad "5" thru_hole oval
 		(at 2.6 -4.3 180)
@@ -418,7 +418,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(zone_connect 2)
-		(uuid "50787315-e2bb-40be-8332-cf90fa7cab4d")
+		(uuid "b92de584-5d0c-4419-8a18-5b739daa1e33")
 	)
 	(pad "6" thru_hole rect
 		(at -5.3 2.8 90)
@@ -427,7 +427,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(zone_connect 2)
-		(uuid "e35f4c03-885d-4846-8083-5c4b2ed5bc54")
+		(uuid "0b50d8d1-3ca8-498a-8d7b-519771f02f89")
 	)
 	(pad "7" thru_hole rect
 		(at 5.5 2.8 90)
@@ -436,7 +436,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(zone_connect 2)
-		(uuid "cf905f34-b532-4b74-ad4d-45cefc5faf46")
+		(uuid "fa14de18-ebd7-4c20-9cd3-e5f2f1ca0667")
 	)
 	(embedded_fonts no)
 	(model "C:/Users/logan/Downloads/Plink Models-Rotary Encoder.step"
